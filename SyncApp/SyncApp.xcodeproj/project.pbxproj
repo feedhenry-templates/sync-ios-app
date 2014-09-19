@@ -14,9 +14,6 @@
 		B3D6EDC019CC46D6009AC21D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6EDBF19CC46D6009AC21D /* AppDelegate.m */; };
 		B3D6EDC919CC46D6009AC21D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6EDC819CC46D6009AC21D /* ViewController.m */; };
 		B3D6EDCB19CC46D7009AC21D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D6EDCA19CC46D7009AC21D /* Images.xcassets */; };
-		B3D6EDD219CC46D7009AC21D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EDD119CC46D7009AC21D /* XCTest.framework */; };
-		B3D6EDD319CC46D7009AC21D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EDAF19CC46D6009AC21D /* Foundation.framework */; };
-		B3D6EDD419CC46D7009AC21D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EDB319CC46D6009AC21D /* UIKit.framework */; };
 		B3D6EDF519CC4786009AC21D /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6EDE819CC4786009AC21D /* DataManager.m */; };
 		B3D6EDF619CC4786009AC21D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3D6EDE919CC4786009AC21D /* Default-568h@2x.png */; };
 		B3D6EDF719CC4786009AC21D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B3D6EDEA19CC4786009AC21D /* Default.png */; };
@@ -40,16 +37,6 @@
 		B3D6EE1D19CC4A37009AC21D /* ShoppingItem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3D6EE1619CC4A37009AC21D /* ShoppingItem.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B3D6EDD519CC46D7009AC21D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B3D6EDA419CC46D6009AC21D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B3D6EDAB19CC46D6009AC21D;
-			remoteInfo = SyncApp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		B3D6EDAC19CC46D6009AC21D /* SyncApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyncApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D6EDAF19CC46D6009AC21D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,7 +50,6 @@
 		B3D6EDC719CC46D6009AC21D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B3D6EDC819CC46D6009AC21D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B3D6EDCA19CC46D7009AC21D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B3D6EDD019CC46D7009AC21D /* SyncAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyncAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D6EDD119CC46D7009AC21D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B3D6EDE719CC4786009AC21D /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		B3D6EDE819CC4786009AC21D /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
@@ -109,16 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3D6EDCD19CC46D7009AC21D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3D6EDD219CC46D7009AC21D /* XCTest.framework in Frameworks */,
-				B3D6EDD419CC46D7009AC21D /* UIKit.framework in Frameworks */,
-				B3D6EDD319CC46D7009AC21D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -138,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				B3D6EDAC19CC46D6009AC21D /* SyncApp.app */,
-				B3D6EDD019CC46D7009AC21D /* SyncAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,24 +212,6 @@
 			productReference = B3D6EDAC19CC46D6009AC21D /* SyncApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B3D6EDCF19CC46D7009AC21D /* SyncAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B3D6EDE419CC46D7009AC21D /* Build configuration list for PBXNativeTarget "SyncAppTests" */;
-			buildPhases = (
-				B3D6EDCC19CC46D7009AC21D /* Sources */,
-				B3D6EDCD19CC46D7009AC21D /* Frameworks */,
-				B3D6EDCE19CC46D7009AC21D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B3D6EDD619CC46D7009AC21D /* PBXTargetDependency */,
-			);
-			name = SyncAppTests;
-			productName = SyncAppTests;
-			productReference = B3D6EDD019CC46D7009AC21D /* SyncAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -263,11 +220,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = FeedHenry;
-				TargetAttributes = {
-					B3D6EDCF19CC46D7009AC21D = {
-						TestTargetID = B3D6EDAB19CC46D6009AC21D;
-					};
-				};
 			};
 			buildConfigurationList = B3D6EDA719CC46D6009AC21D /* Build configuration list for PBXProject "SyncApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -283,7 +235,6 @@
 			projectRoot = "";
 			targets = (
 				B3D6EDAB19CC46D6009AC21D /* SyncApp */,
-				B3D6EDCF19CC46D7009AC21D /* SyncAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -306,13 +257,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3D6EDCE19CC46D7009AC21D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -332,22 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3D6EDCC19CC46D7009AC21D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B3D6EDD619CC46D7009AC21D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B3D6EDAB19CC46D6009AC21D /* SyncApp */;
-			targetProxy = B3D6EDD519CC46D7009AC21D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B3D6EE0D19CC4A37009AC21D /* InfoPlist.strings */ = {
@@ -487,46 +416,6 @@
 			};
 			name = Release;
 		};
-		B3D6EDE519CC46D7009AC21D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SyncApp.app/SyncApp";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SyncApp/SyncApp-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SyncAppTests/SyncAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B3D6EDE619CC46D7009AC21D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SyncApp.app/SyncApp";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SyncApp/SyncApp-Prefix.pch";
-				INFOPLIST_FILE = "SyncAppTests/SyncAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -546,14 +435,7 @@
 				B3D6EDE319CC46D7009AC21D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		B3D6EDE419CC46D7009AC21D /* Build configuration list for PBXNativeTarget "SyncAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3D6EDE519CC46D7009AC21D /* Debug */,
-				B3D6EDE619CC46D7009AC21D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
