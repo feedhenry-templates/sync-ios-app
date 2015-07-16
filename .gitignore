@@ -8,3 +8,4 @@ ehthumbs.db
 Thumbs.db
 **/*.xcuserdatad/**
 **/*.xcworkspace/**
+**/DerivedData/*
