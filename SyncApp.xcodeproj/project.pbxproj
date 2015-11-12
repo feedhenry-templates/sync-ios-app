@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482EDA421BF4D4A20073B9FD /* FH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482EDA411BF4D4A20073B9FD /* FH.framework */; };
 		B3D6EDB019CC46D6009AC21D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EDAF19CC46D6009AC21D /* Foundation.framework */; };
 		B3D6EDB219CC46D6009AC21D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EDB119CC46D6009AC21D /* CoreGraphics.framework */; };
 		B3D6EDB419CC46D6009AC21D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EDB319CC46D6009AC21D /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		B3D6EDFB19CC4786009AC21D /* RootViewCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6EDF019CC4786009AC21D /* RootViewCotroller.m */; };
 		B3D6EDFC19CC4786009AC21D /* ShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D6EDF219CC4786009AC21D /* ShoppingItem.m */; };
 		B3D6EDFD19CC4786009AC21D /* ShoppingItem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3D6EDF319CC4786009AC21D /* ShoppingItem.xcdatamodeld */; };
-		B3D6EDFF19CC47CE009AC21D /* FH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EDFE19CC47CE009AC21D /* FH.framework */; };
 		B3D6EE0119CC47FD009AC21D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EE0019CC47FD009AC21D /* libxml2.dylib */; };
 		B3D6EE0319CC4806009AC21D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EE0219CC4806009AC21D /* libz.dylib */; };
 		B3D6EE0519CC480F009AC21D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EE0419CC480F009AC21D /* SystemConfiguration.framework */; };
@@ -38,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		482EDA411BF4D4A20073B9FD /* FH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FH.framework; sourceTree = "<group>"; };
 		B3D6EDAC19CC46D6009AC21D /* SyncApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyncApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D6EDAF19CC46D6009AC21D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B3D6EDB119CC46D6009AC21D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,7 +65,6 @@
 		B3D6EDF119CC4786009AC21D /* ShoppingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingItem.h; sourceTree = "<group>"; };
 		B3D6EDF219CC4786009AC21D /* ShoppingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingItem.m; sourceTree = "<group>"; };
 		B3D6EDF419CC4786009AC21D /* ShoppingItem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingItem.xcdatamodel; sourceTree = "<group>"; };
-		B3D6EDFE19CC47CE009AC21D /* FH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FH.framework; path = SyncApp/FH.framework; sourceTree = "<group>"; };
 		B3D6EE0019CC47FD009AC21D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		B3D6EE0219CC4806009AC21D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B3D6EE0419CC480F009AC21D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -88,7 +88,7 @@
 				B3D6EE0519CC480F009AC21D /* SystemConfiguration.framework in Frameworks */,
 				B3D6EE0319CC4806009AC21D /* libz.dylib in Frameworks */,
 				B3D6EE0119CC47FD009AC21D /* libxml2.dylib in Frameworks */,
-				B3D6EDFF19CC47CE009AC21D /* FH.framework in Frameworks */,
+				482EDA421BF4D4A20073B9FD /* FH.framework in Frameworks */,
 				B3D6EDB219CC46D6009AC21D /* CoreGraphics.framework in Frameworks */,
 				B3D6EDB419CC46D6009AC21D /* UIKit.framework in Frameworks */,
 				B3D6EDB019CC46D6009AC21D /* Foundation.framework in Frameworks */,
@@ -126,7 +126,7 @@
 				B3D6EE0419CC480F009AC21D /* SystemConfiguration.framework */,
 				B3D6EE0219CC4806009AC21D /* libz.dylib */,
 				B3D6EE0019CC47FD009AC21D /* libxml2.dylib */,
-				B3D6EDFE19CC47CE009AC21D /* FH.framework */,
+				482EDA411BF4D4A20073B9FD /* FH.framework */,
 				B3D6EDAF19CC46D6009AC21D /* Foundation.framework */,
 				B3D6EDB119CC46D6009AC21D /* CoreGraphics.framework */,
 				B3D6EDB319CC46D6009AC21D /* UIKit.framework */,
@@ -386,6 +386,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SyncApp",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SyncApp/SyncApp-Prefix.pch";
@@ -405,6 +406,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SyncApp",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SyncApp/SyncApp-Prefix.pch";
