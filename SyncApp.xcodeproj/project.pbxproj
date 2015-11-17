@@ -147,6 +147,7 @@
 				B3D6EDC719CC46D6009AC21D /* ViewController.h */,
 				B3D6EDC819CC46D6009AC21D /* ViewController.m */,
 				B3D6EDCA19CC46D7009AC21D /* Images.xcassets */,
+				B3D6EE1119CC4A37009AC21D /* MainStoryboard_iPhone.storyboard */,
 				B3D6EDB619CC46D6009AC21D /* Supporting Files */,
 			);
 			path = SyncApp;
@@ -173,7 +174,6 @@
 			children = (
 				B3D6EE0D19CC4A37009AC21D /* InfoPlist.strings */,
 				B3D6EE0F19CC4A37009AC21D /* MainStoryboard_iPad.storyboard */,
-				B3D6EE1119CC4A37009AC21D /* MainStoryboard_iPhone.storyboard */,
 			);
 			path = en.lproj;
 			sourceTree = "<group>";
@@ -295,6 +295,7 @@
 				B3D6EE1219CC4A37009AC21D /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
