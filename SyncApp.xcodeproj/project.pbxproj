@@ -30,7 +30,6 @@
 		B3D6EE0719CC4817009AC21D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EE0619CC4817009AC21D /* CFNetwork.framework */; };
 		B3D6EE0919CC481F009AC21D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D6EE0819CC481F009AC21D /* MobileCoreServices.framework */; };
 		B3D6EE1819CC4A37009AC21D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3D6EE0D19CC4A37009AC21D /* InfoPlist.strings */; };
-		B3D6EE1919CC4A37009AC21D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D6EE0F19CC4A37009AC21D /* MainStoryboard_iPad.storyboard */; };
 		B3D6EE1A19CC4A37009AC21D /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D6EE1119CC4A37009AC21D /* MainStoryboard_iPhone.storyboard */; };
 		B3D6EE1B19CC4A37009AC21D /* shopping-basket.png in Resources */ = {isa = PBXBuildFile; fileRef = B3D6EE1419CC4A37009AC21D /* shopping-basket.png */; };
 		B3D6EE1C19CC4A37009AC21D /* shopping-basket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3D6EE1519CC4A37009AC21D /* shopping-basket@2x.png */; };
@@ -70,7 +69,6 @@
 		B3D6EE0619CC4817009AC21D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B3D6EE0819CC481F009AC21D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B3D6EE0E19CC4A37009AC21D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
-		B3D6EE1019CC4A37009AC21D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		B3D6EE1219CC4A37009AC21D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		B3D6EE1419CC4A37009AC21D /* shopping-basket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping-basket.png"; sourceTree = "<group>"; };
 		B3D6EE1519CC4A37009AC21D /* shopping-basket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping-basket@2x.png"; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				B3D6EE0D19CC4A37009AC21D /* InfoPlist.strings */,
-				B3D6EE0F19CC4A37009AC21D /* MainStoryboard_iPad.storyboard */,
 			);
 			path = en.lproj;
 			sourceTree = "<group>";
@@ -239,7 +236,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D6EE1919CC4A37009AC21D /* MainStoryboard_iPad.storyboard in Resources */,
 				B3D6EDF719CC4786009AC21D /* Default.png in Resources */,
 				B3D6EE1819CC4A37009AC21D /* InfoPlist.strings in Resources */,
 				B3D6EDCB19CC46D7009AC21D /* Images.xcassets in Resources */,
@@ -279,14 +275,6 @@
 				B3D6EE0E19CC4A37009AC21D /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B3D6EE0F19CC4A37009AC21D /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3D6EE1019CC4A37009AC21D /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		B3D6EE1119CC4A37009AC21D /* MainStoryboard_iPhone.storyboard */ = {
