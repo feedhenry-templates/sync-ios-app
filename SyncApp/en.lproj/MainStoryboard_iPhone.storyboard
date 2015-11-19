@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fhm-IS-9lG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P3p-Os-roX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7lL-eq-VoJ">
@@ -57,14 +57,10 @@
                     <navigationItem key="navigationItem" title="Sync Demo" id="8bU-TN-FaJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="MwN-WA-RD8">
                             <connections>
-                                <action selector="onAddButtonTap:" destination="urW-HB-sh1" id="JEE-6Q-mB4"/>
                                 <segue destination="172-4H-Q2t" kind="show" identifier="showNewItemDetails" id="GMh-jm-f1l"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="addButton" destination="MwN-WA-RD8" id="kPa-ha-qUK"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTn-Uh-XEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,14 +82,14 @@
                                 <rect key="frame" x="20" y="146" width="66" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Created" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijF-OW-cQl">
                                 <rect key="frame" x="20" y="202" width="61" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZg-Lm-vpK">
@@ -102,13 +98,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="UID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ii8-Jo-hjs">
-                                <rect key="frame" x="30" y="13" width="30" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-54-yla">
                                 <rect key="frame" x="94" y="146" width="493" height="21"/>
                                 <animations/>
@@ -136,43 +125,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Item" id="mGp-83-hpS">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Fu6-ip-xxA">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rgu-8P-eQk">
-                                <rect key="frame" x="20" y="7" width="52" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="y3n-ts-C4s"/>
-                                </constraints>
-                                <state key="normal" title="Delete">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="deleteItem:" destination="172-4H-Q2t" eventType="touchDown" id="9Fa-Nw-hBK"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="mcS-eD-Pk0">
+                            <connections>
+                                <action selector="cancel:" destination="172-4H-Q2t" id="ecO-An-F4i"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="aPB-zr-CHe">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xaC-U7-c76">
-                                <rect key="frame" x="546" y="7" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <state key="normal" title="Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveItem:" destination="172-4H-Q2t" eventType="touchDown" id="IE8-3s-fTb"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="aPB-zr-CHe">
+                            <connections>
+                                <action selector="saveItem:" destination="172-4H-Q2t" id="viq-fe-Lb1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="createLabel" destination="ijF-OW-cQl" id="v2f-1U-auy"/>
                         <outlet property="createdField" destination="AZg-Lm-vpK" id="Hq9-Jj-hfB"/>
-                        <outlet property="deleteButton" destination="rgu-8P-eQk" id="VkZ-Q4-vn0"/>
                         <outlet property="nameField" destination="KWB-54-yla" id="bAy-iA-ZWJ"/>
-                        <outlet property="saveButton" destination="xaC-U7-c76" id="9oe-wO-VdA"/>
-                        <outlet property="uidLabel" destination="Ii8-Jo-hjs" id="z0r-d8-Zw9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWB-aC-2IZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -196,30 +163,12 @@
             </objects>
             <point key="canvasLocation" x="493.125" y="-522.5"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="47r-41-taX">
-            <objects>
-                <tabBarController definesPresentationContext="YES" id="Fhm-IS-9lG" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="mvW-kG-tDT">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="P3p-Os-roX" kind="relationship" relationship="viewControllers" id="iEW-ln-NcR"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2ji-gp-nuT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-727.5" y="-200"/>
-        </scene>
     </scenes>
     <resources>
         <image name="shopping-basket.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GMh-jm-f1l"/>
+        <segue reference="5zP-Ez-ff8"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.84313732389999996" green="0.066666670139999995" blue="0.18823531269999999" alpha="1" colorSpace="deviceRGB"/>
 </document>

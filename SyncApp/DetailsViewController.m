@@ -122,6 +122,10 @@
   [self.nameField resignFirstResponder];
 }
 
+- (IBAction)cancel:(UIBarButtonItem *)sender {
+    [(UINavigationController*)self.parentViewController popViewControllerAnimated:YES];
+}
+
 - (IBAction)deleteItem:(id)sender
 {
   [dataManager deleteItem:_item];

@@ -22,15 +22,11 @@
 @interface RootViewCotroller : UITableViewController
 {
   NSArray* items;
-  IBOutlet UIBarButtonItem* addButton;
   DataManager* dataManager;
 }
 
 @property (nonatomic, retain) NSArray* items;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem* addButton;
 @property (nonatomic, retain) DataManager* dataManager;
-
--(IBAction)onAddButtonTap:(id) sender;
 
 
 @end
