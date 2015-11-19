@@ -27,73 +27,121 @@
 - (void) start
 {
   FHSyncConfig* conf = [[FHSyncConfig alloc] init];
+  conf.syncFrequency = 30;
   conf.notifySyncStarted = YES;
   conf.notifySyncCompleted = YES;
+  conf.notifySyncFailed = YES;
   conf.notifyRemoteUpdateApplied = YES;
   conf.notifyRemoteUpdateFailed = YES;
   conf.notifyLocalUpdateApplied = YES;
+  conf.notifyDeltaReceived = YES;
+  conf.crashCountWait = 0;
   [_syncClient initWithConfig:conf];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onSyncMessage:) name:kFHSyncStateChangedNotification object:nil];
   [self.syncClient manageWithDataId:DATA_ID AndConfig:nil AndQuery:[NSDictionary dictionary]];
 }
+
 
 - (void) onSyncMessage:(NSNotification*) note
 {
   FHSyncNotificationMessage* msg = (FHSyncNotificationMessage*) [note object];
   NSLog(@"Got notification %@", msg);
   NSString* code = msg.code;
-  if([code isEqualToString:SYNC_COMPLETE_MESSAGE]){
-    NSMutableDictionary* data = [[self.syncClient listWithDataId:DATA_ID] mutableCopy];
-    NSMutableArray* processed = [NSMutableArray array];
-    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"ShoppingItem"];
-    NSArray* alldata = [self.managedObjectContext executeFetchRequest:request error:nil];
-    for (int i=0; i<alldata.count; i++) {
-      ShoppingItem* item = (ShoppingItem*)[alldata objectAtIndex:i];
-      if (item && item.uid) {
-        [processed addObject:item.uid];
+  //when a new record is created for the first time, the uid is a temporary one and will change once the data is synced to the cloud.
+  //Here we listen for the REMOTE_UPDATE_APPLIED_MESSAGE notification and update the data record with the updated uid
+  if([code isEqualToString:REMOTE_UPDATE_APPLIED_MESSAGE]) {
+    NSString* message = msg.message;
+    NSDictionary* obj = [message objectFromJSONString];
+    if ([[obj valueForKey:@"action"] isEqualToString:@"create"]) {
+      NSString* oldUid = [obj valueForKey:@"hash"];
+      NSString* newUid = [obj valueForKey:@"uid"];
+      NSLog(@"creation applied, old uid = %@ and new uid = %@", oldUid, newUid);
+      ShoppingItem* item = [self findItemByUid:oldUid];
+      if (item) {
+        item.uid = newUid;
       }
-      if ([data objectForKey:item.uid]) {
-        //data already exists
-        NSDictionary* syncData = [[data objectForKey:item.uid] objectForKey:@"data"];
-        item.name = [syncData objectForKey:@"name"];
-        NSNumber* create = [NSNumber numberWithLongLong:[[syncData objectForKey:@"created"] longLongValue]/1000];
-        item.created = [NSDate dateWithTimeIntervalSince1970:[create doubleValue]];
-        NSLog(@"Update record: %@", item);
-      } else {
-        //data deleted
-        [self.managedObjectContext deleteObject:item];
-        NSLog(@"Delete record: %@", item);
+      if ([self.managedObjectContext hasChanges]) {
+        NSError* saveError;
+        if(![[self managedObjectContext] save:&saveError]){
+          NSLog(@"Failed to update uid from %@ to %@ due to error %@", oldUid, newUid, [saveError localizedDescription]);
+        }
       }
     }
-    
-    [data removeObjectsForKeys:processed]; //what left will be new data
-    
-    [data enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL* stop){
-      NSDictionary* datasource = [obj objectForKey:@"data"];
-      ShoppingItem* record = [NSEntityDescription insertNewObjectForEntityForName:@"ShoppingItem" inManagedObjectContext:[self managedObjectContext]];
-      record.uid = key;
-      record.name = [datasource objectForKey:@"name"];
-      NSNumber* create = [NSNumber numberWithLongLong:[[datasource objectForKey:@"created"] longLongValue]/1000];
-      record.created = [NSDate dateWithTimeIntervalSince1970:[create doubleValue]];
-      NSLog(@"Creating record: %@", record);
-    }];
-    
-    NSError *error;
-    if(![self.managedObjectContext save:&error]){
-      NSLog(@"Error when saving record: %@", [error localizedDescription]);
+  }
+  
+  if (([code isEqualToString:LOCAL_UPDATE_APPLIED_MESSAGE] || [code isEqualToString:DELTA_RECEIVED_MESSAGE]) && msg.UID) {
+    NSString* action = [msg message];
+    NSString* uid = [msg UID];
+    if ([action isEqualToString:@"create"]) {
+      ShoppingItem* existing = [self findItemByUid:uid];
+      NSDictionary* data = [self.syncClient readWithDataId:DATA_ID AndUID:uid];
+      NSDictionary* datasource = [data objectForKey:@"data"];
+      if (!existing) {
+        existing = [NSEntityDescription insertNewObjectForEntityForName:@"ShoppingItem" inManagedObjectContext:[self managedObjectContext]];
+        existing.uid = uid;
+        NSNumber* create = [NSNumber numberWithLongLong:[[datasource objectForKey:@"created"] longLongValue]/1000];
+        existing.created = [NSDate dateWithTimeIntervalSince1970:[create doubleValue]];
+      }
+      existing.name = [datasource objectForKey:@"name"];
+    } else {
+      ShoppingItem* item = [self findItemByUid:uid];
+      if (item) {
+        if([action isEqualToString:@"update"]) {
+          NSDictionary* data = [self.syncClient readWithDataId:DATA_ID AndUID:uid];
+          NSDictionary* updated = [data objectForKey:@"data"];
+          item.name = [updated valueForKey:@"name"];
+        } else if ([action isEqualToString:@"delete"]) {
+          [[self managedObjectContext] deleteObject:item];
+        }
+      }
     }
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:kAppDataUpdatedNotification object:nil];
+    if ([self.managedObjectContext hasChanges]) {
+      NSError* saveError;
+      if(![self.managedObjectContext save:&saveError]){
+        NSLog(@"Error when saving record: %@", [saveError localizedDescription]);
+      }
+    }
+  }
+  
+  [[NSNotificationCenter defaultCenter] postNotificationName:kAppDataUpdatedNotification object:nil]; 
+}
+
+- (ShoppingItem*) findItemByUid:(NSString*) uid
+{
+  NSFetchRequest* request = [[NSFetchRequest alloc]init];
+  NSEntityDescription* entity = [NSEntityDescription entityForName:@"ShoppingItem" inManagedObjectContext:[self managedObjectContext]];
+  [request setEntity:entity];
+  NSPredicate* predicate = [NSPredicate predicateWithFormat:@"uid == %@", uid];
+  [request setPredicate:predicate];
+  NSError* error;
+  NSArray* results = [[self managedObjectContext] executeFetchRequest:request error:&error];
+  if(!error){
+    if ([results count] > 0) {
+      ShoppingItem* item = [results objectAtIndex:0];
+      return item;
+    } else {
+      return nil;
+    }
+  } else {
+    NSLog(@"Error when lookup item with uid: %@, error: %@", uid, [error localizedDescription]);
+    return nil;
   }
 }
 
 - (NSArray*) listItems
 {
+    
+//    NSDictionary* list =  [_syncClient listWithDataId:DATA_ID];
+//    if (list) {
+//        return [list allValues];
+//    }
+//    return nil;
   NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"ShoppingItem"];
   NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"created" ascending:NO];
   NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
   [request setSortDescriptors:sortDescriptors];
   return [self.managedObjectContext executeFetchRequest:request error:nil];
+
 }
 
 - (ShoppingItem*) createItem:(ShoppingItem*) shoppingItem
@@ -123,6 +171,7 @@
 
 - (ShoppingItem*) getItem
 {
-  return [NSEntityDescription insertNewObjectForEntityForName:@"ShoppingItem" inManagedObjectContext:[self managedObjectContext]];
+  NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"ShoppingItem" inManagedObjectContext:self.managedObjectContext];
+  return [[ShoppingItem alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:nil];
 }
 @end
