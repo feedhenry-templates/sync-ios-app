@@ -53,3 +53,6 @@ In ```SyncApp/DataManager.m``` the method ```onSyncMessage``` is your callback m
     [[NSNotificationCenter defaultCenter] postNotificationName:kAppDataUpdatedNotification object:nil];
 }
 ```
+### Running the app
+
+![iOS shopping list](ios-sync.png)
