@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
     <key>host</key>
-    <string>replace me</string>
+    <string>https://redhat-demos-t.sandbox.feedhenry.com</string>
     <key>appid</key>
-    <string>replace me</string>
+    <string>v63zu2qoi62ontzj3pxkxs6x</string>
     <key>projectid</key>
-    <string>replace me</string>
+    <string>v63zu2r2dgc7mqqy45wuiivk</string>
     <key>appkey</key>
-    <string>replace me</string>
+    <string>6e062079da0ad4983aabfd71156405f7c739c62c</string>
     <key>connectiontag</key>
-    <string>replace me</string>
+    <string>0.0.2</string>
 </dict>
 </plist>
