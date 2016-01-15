@@ -31,7 +31,7 @@
 		48287ECD1C247338005D5E52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		48287ED51C247338005D5E52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48287ED81C247338005D5E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		48287EDA1C247338005D5E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48287EDA1C247338005D5E52 /* sync-ios-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sync-ios-app-Info.plist"; sourceTree = "<group>"; };
 		48287EE01C2474FD005D5E52 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		48287EE11C2474FD005D5E52 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		48287EE31C24750B005D5E52 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 				48287EF91C247698005D5E52 /* MainStoryboard.storyboard */,
 				48287ED51C247338005D5E52 /* Assets.xcassets */,
 				48287ED71C247338005D5E52 /* LaunchScreen.storyboard */,
-				48287EDA1C247338005D5E52 /* Info.plist */,
+				48287EDA1C247338005D5E52 /* sync-ios-app-Info.plist */,
 				48287EC91C247338005D5E52 /* Supporting Files */,
 			);
 			path = "sync-ios-app";
@@ -373,7 +373,7 @@
 			baseConfigurationReference = 6C770976B26E2078BD0D7CAB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "sync-ios-app/Info.plist";
+				INFOPLIST_FILE = "sync-ios-app/sync-ios-app-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.feedhenry.sync-ios-app";
@@ -386,7 +386,7 @@
 			baseConfigurationReference = 4710746F0D1ECB798D8A0FCC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "sync-ios-app/Info.plist";
+				INFOPLIST_FILE = "sync-ios-app/sync-ios-app-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.feedhenry.sync-ios-app";
