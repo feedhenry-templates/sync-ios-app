@@ -1,5 +1,7 @@
 # sync-ios-app 
 
+> ObjC/Cocoapods of sync iOS app is available [here](https://github.com/feedhenry-templates/sync-ios-app/tree/cocoapods).
+
 ```sync-ios-app``` is a simple shopping list app that works with its server side companion app: [Sync Cloud App](https://github.com/feedhenry-templates/sync-cloud). This template demos the usage of the synchronization framework provided by [fh-ios-sdk](https://github.com/feedhenry/fh-ios-sdk) and how you can integrate it with Core Data.
 
 |                 | Project Info  |
