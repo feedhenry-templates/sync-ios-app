@@ -10,7 +10,6 @@
 		48287ECB1C247338005D5E52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48287ECA1C247338005D5E52 /* main.m */; };
 		48287ECE1C247338005D5E52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48287ECD1C247338005D5E52 /* AppDelegate.m */; };
 		48287ED61C247338005D5E52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48287ED51C247338005D5E52 /* Assets.xcassets */; };
-		48287ED91C247338005D5E52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48287ED71C247338005D5E52 /* LaunchScreen.storyboard */; };
 		48287EE21C2474FD005D5E52 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48287EE11C2474FD005D5E52 /* DataManager.m */; };
 		48287EE51C24750B005D5E52 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48287EE41C24750B005D5E52 /* DetailsViewController.m */; };
 		48287EF01C24751E005D5E52 /* RootViewCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 48287EE71C24751E005D5E52 /* RootViewCotroller.m */; };
@@ -30,7 +29,6 @@
 		48287ECC1C247338005D5E52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48287ECD1C247338005D5E52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		48287ED51C247338005D5E52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		48287ED81C247338005D5E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48287EDA1C247338005D5E52 /* sync-ios-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sync-ios-app-Info.plist"; sourceTree = "<group>"; };
 		48287EE01C2474FD005D5E52 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		48287EE11C2474FD005D5E52 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				48287EED1C24751E005D5E52 /* SyncApp-Prefix.pch */,
 				48287EF91C247698005D5E52 /* MainStoryboard.storyboard */,
 				48287ED51C247338005D5E52 /* Assets.xcassets */,
-				48287ED71C247338005D5E52 /* LaunchScreen.storyboard */,
 				48287EDA1C247338005D5E52 /* sync-ios-app-Info.plist */,
 				48287EC91C247338005D5E52 /* Supporting Files */,
 			);
@@ -190,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				48287EFB1C247698005D5E52 /* MainStoryboard.storyboard in Resources */,
-				48287ED91C247338005D5E52 /* LaunchScreen.storyboard in Resources */,
 				48287EF61C247535005D5E52 /* fhconfig.plist in Resources */,
 				48287ED61C247338005D5E52 /* Assets.xcassets in Resources */,
 				48287EF31C24751E005D5E52 /* SyncApp-Info.plist in Resources */,
@@ -265,14 +261,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		48287ED71C247338005D5E52 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48287ED81C247338005D5E52 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		48287EF91C247698005D5E52 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
