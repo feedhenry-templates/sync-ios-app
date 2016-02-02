@@ -1,4 +1,4 @@
-# sync-ios-app 
+# sync-ios-app [![Build Status](https://travis-ci.org/feedhenry-templates/sync-ios-app.png)](https://travis-ci.org/feedhenry-templates/sync-ios-app)
 
 > ObjC/Cocoapods of sync iOS app is available [here](https://github.com/feedhenry-templates/sync-ios-app/tree/cocoapods).
 
