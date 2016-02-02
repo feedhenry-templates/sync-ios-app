@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode7
 xcode_project: SyncApp.xcodeproj
-xcode_scheme: blank-ios-app
+xcode_scheme: SyncApp
 xcode_sdk: iphonesimulator
 
 notifications:
