@@ -1,4 +1,4 @@
-# sync-ios-app 
+# sync-ios-app [![Build Status](https://travis-ci.org/feedhenry-templates/sync-ios-app.png)](https://travis-ci.org/feedhenry-templates/sync-ios-app)
 
 ```sync-ios-app``` is a simple shopping list app that works with its server side companion app: [Sync Cloud App](https://github.com/feedhenry-templates/sync-cloud). This template demos the usage of the synchronization framework provided by [fh-ios-sdk](https://github.com/feedhenry/fh-ios-sdk) and how you can integrate it with Core Data.
 
