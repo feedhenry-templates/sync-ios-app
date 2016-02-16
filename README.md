@@ -2,23 +2,41 @@
 
 > ObjC/Cocoapods of sync iOS app is available [here](https://github.com/feedhenry-templates/sync-ios-app/tree/cocoapods).
 
-```sync-ios-app``` is a simple shopping list app that works with its server side companion app: [Sync Cloud App](https://github.com/feedhenry-templates/sync-cloud). This template demos the usage of the synchronization framework provided by [fh-ios-sdk](https://github.com/feedhenry/fh-ios-sdk) and how you can integrate it with Core Data.
+Author: Corinne Krych   
+Level: Intermediate  
+Technologies: Objective-C, iOS, RHMAP
+Summary: A demonstration of how to synchronize a single collection with RHMAP. 
+Community Project : [Feed Henry](http://feedhenry.org)
+Target Product: RHMAP  
+Product Versions: RHMAP 3.7.0+   
+Source: https://github.com/feedhenry-templates/sync-ios-app  
+Prerequisites: fh-ios-sdk : 3.+, Xcode : 7.2+, iOS SDK : iOS7+
 
-|                 | Project Info  |
-| --------------- | ------------- |
-| License:        | Apache License, Version 2.0  |
-| Build:          | Embedded FH.framework  |
-| Documentation:  | http://docs.feedhenry.com/v3/dev_tools/sdks/ios.html|
+## What is it?
 
-### Build
+This application manages items in a collection that is synchronized with a remote RHMAP cloud application.  The user can create, update, and delete collection items.  Refer to [SyncApp/fhconfig.plist](SyncApp/fhconfig.plist) for the delevant pieces of code and configuraiton.
 
+If you do not have access to a RHMAP instance, you can sign up for a free instance at [https://openshift.feedhenry.com/](https://openshift.feedhenry.com/).
+
+## How do I run it?  
+
+### RHMAP Studio
+
+This application and its cloud services are available as a project template in RHMAP as part of the "Sync Framework Project" template.
+
+### Local Clone (ideal for Open Source Development)
+If you wish to contribute to this template, the following information may be helpful; otherwise, RHMAP and its build facilities are the preferred solution.
+
+#### Build instructions
 1. Clone this project
 
 2. Populate ```SyncApp/fhconfig.plist``` with your values as explained [here](http://docs.feedhenry.com/v3/dev_tools/sdks/ios.html#ios-configure).
 
-3. open SyncApp.xcodeproj
+3. Open SyncApp.xcodeproj
 
-## Example Usage
+4. Run the project
+ 
+## How does it work?
 
 ### Start synchronization
 
@@ -55,6 +73,3 @@ In ```SyncApp/DataManager.m``` the method ```onSyncMessage``` is your callback m
     [[NSNotificationCenter defaultCenter] postNotificationName:kAppDataUpdatedNotification object:nil];
 }
 ```
-### Running the app
-
-![iOS shopping list](ios-sync.png)
