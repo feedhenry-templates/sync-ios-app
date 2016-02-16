@@ -27,7 +27,8 @@ This application and its cloud services are available as a project template in R
 ### Local Clone (ideal for Open Source Development)
 If you wish to contribute to this template, the following information may be helpful; otherwise, RHMAP and its build facilities are the preferred solution.
 
-#### Build instructions
+## Build instructions
+
 1. Clone this project
 
 2. Populate ```SyncApp/fhconfig.plist``` with your values as explained [here](http://docs.feedhenry.com/v3/dev_tools/sdks/ios.html#ios-configure).
