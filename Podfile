@@ -1,7 +1,9 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-xcodeproj 'sync-ios-app.xcodeproj'
+project 'sync-ios-app.xcodeproj'
 platform :ios, '7.0'
 
-pod 'FH', '~> 3.0.0'
+target 'sync-ios-app' do
+	pod 'FH', '~> 3.1.1'
+end

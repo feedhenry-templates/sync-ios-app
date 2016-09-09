@@ -18,12 +18,10 @@
 		48287EF31C24751E005D5E52 /* SyncApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48287EEC1C24751E005D5E52 /* SyncApp-Info.plist */; };
 		48287EF61C247535005D5E52 /* fhconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48287EF51C247535005D5E52 /* fhconfig.plist */; };
 		48287EFB1C247698005D5E52 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48287EF91C247698005D5E52 /* MainStoryboard.storyboard */; };
-		91238D9199A89240E1D20FE3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 465C03F53BC3A0C58ECE896B /* libPods.a */; };
+		EE06A9A7FF8F1C2475CBC202 /* libPods-sync-ios-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4824AD89A58F06C6B475843 /* libPods-sync-ios-app.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		465C03F53BC3A0C58ECE896B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4710746F0D1ECB798D8A0FCC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		48287EC61C247338005D5E52 /* sync-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sync-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48287ECA1C247338005D5E52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		48287ECC1C247338005D5E52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,7 +41,9 @@
 		48287EED1C24751E005D5E52 /* SyncApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SyncApp-Prefix.pch"; sourceTree = "<group>"; };
 		48287EF51C247535005D5E52 /* fhconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fhconfig.plist; sourceTree = "<group>"; };
 		48287EFA1C247698005D5E52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6C770976B26E2078BD0D7CAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		712B6EE36E2728B1D951023C /* Pods-sync-ios-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sync-ios-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sync-ios-app/Pods-sync-ios-app.debug.xcconfig"; sourceTree = "<group>"; };
+		E4824AD89A58F06C6B475843 /* libPods-sync-ios-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sync-ios-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC734863384937DCFC7DF93 /* Pods-sync-ios-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sync-ios-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-sync-ios-app/Pods-sync-ios-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91238D9199A89240E1D20FE3 /* libPods.a in Frameworks */,
+				EE06A9A7FF8F1C2475CBC202 /* libPods-sync-ios-app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 		64039CF2E155DBF452DE6E23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				465C03F53BC3A0C58ECE896B /* libPods.a */,
+				E4824AD89A58F06C6B475843 /* libPods-sync-ios-app.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,8 +120,8 @@
 		9120BBDA0C321D223A7A8E6A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C770976B26E2078BD0D7CAB /* Pods.debug.xcconfig */,
-				4710746F0D1ECB798D8A0FCC /* Pods.release.xcconfig */,
+				712B6EE36E2728B1D951023C /* Pods-sync-ios-app.debug.xcconfig */,
+				FAC734863384937DCFC7DF93 /* Pods-sync-ios-app.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -133,12 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48287EDD1C247338005D5E52 /* Build configuration list for PBXNativeTarget "sync-ios-app" */;
 			buildPhases = (
-				6847A48E159B770315046CF2 /* Check Pods Manifest.lock */,
+				6847A48E159B770315046CF2 /* [CP] Check Pods Manifest.lock */,
 				48287EC21C247338005D5E52 /* Sources */,
 				48287EC31C247338005D5E52 /* Frameworks */,
 				48287EC41C247338005D5E52 /* Resources */,
-				C1F30E171D2A2CA44AA93E91 /* Embed Pods Frameworks */,
-				C277F13CFDAF89072E35BD63 /* Copy Pods Resources */,
+				C1F30E171D2A2CA44AA93E91 /* [CP] Embed Pods Frameworks */,
+				C277F13CFDAF89072E35BD63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,14 +196,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6847A48E159B770315046CF2 /* Check Pods Manifest.lock */ = {
+		6847A48E159B770315046CF2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,34 +211,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C1F30E171D2A2CA44AA93E91 /* Embed Pods Frameworks */ = {
+		C1F30E171D2A2CA44AA93E91 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sync-ios-app/Pods-sync-ios-app-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C277F13CFDAF89072E35BD63 /* Copy Pods Resources */ = {
+		C277F13CFDAF89072E35BD63 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sync-ios-app/Pods-sync-ios-app-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -358,7 +358,7 @@
 		};
 		48287EDE1C247338005D5E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C770976B26E2078BD0D7CAB /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 712B6EE36E2728B1D951023C /* Pods-sync-ios-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "sync-ios-app/sync-ios-app-Info.plist";
@@ -371,7 +371,7 @@
 		};
 		48287EDF1C247338005D5E52 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4710746F0D1ECB798D8A0FCC /* Pods.release.xcconfig */;
+			baseConfigurationReference = FAC734863384937DCFC7DF93 /* Pods-sync-ios-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "sync-ios-app/sync-ios-app-Info.plist";
