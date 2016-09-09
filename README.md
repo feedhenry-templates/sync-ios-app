@@ -8,7 +8,7 @@ Community Project : [Feed Henry](http://feedhenry.org)
 Target Product: RHMAP  
 Product Versions: RHMAP 3.7.0+   
 Source: https://github.com/feedhenry-templates/sync-ios-app  
-Prerequisites: fh-ios-sdk : 3.+, Xcode : 7.2+, iOS SDK : iOS7+, CocoaPods: 0.39+
+Prerequisites: fh-ios-sdk : 3.+, Xcode : 7.2+, iOS SDK : iOS7+, CocoaPods: 1.0.1+
 
 ## What is it?
 
