@@ -1,6 +1,8 @@
 # sync-ios-app
 [![Build Status](https://travis-ci.org/feedhenry-templates/sync-ios-app.png)](https://travis-ci.org/feedhenry-templates/sync-ios-app)
 
+> Swift version is available [here](https://github.com/feedhenry-templates/sync-ios-swift).
+
 Author: Corinne Krych   
 Level: Intermediate  
 Technologies: Objective-C, iOS, RHMAP, CocoaPods.
