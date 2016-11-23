@@ -8,11 +8,11 @@ Community Project : [Feed Henry](http://feedhenry.org)
 Target Product: RHMAP  
 Product Versions: RHMAP 3.7.0+   
 Source: https://github.com/feedhenry-templates/sync-ios-app  
-Prerequisites: fh-ios-sdk : 3.+, Xcode : 7.2+, iOS SDK : iOS7+, CocoaPods: 1.0.1+
+Prerequisites: fh-ios-sdk : 3.+, Xcode : 8+, iOS SDK : iOS8+, CocoaPods: 1.0.1+
 
 ## What is it?
 
-This application manages items in a collection that is synchronized with a remote RHMAP cloud application.  The user can create, update, and delete collection items.  Refer to [SyncApp/fhconfig.plist](SyncApp/fhconfig.plist) for the delevant pieces of code and configuraiton.
+This application manages items in a collection that is synchronized with a remote RHMAP cloud application.  The user can create, update, and delete collection items.
 
 If you do not have access to a RHMAP instance, you can sign up for a free instance at [https://openshift.feedhenry.com/](https://openshift.feedhenry.com/).
 
@@ -29,11 +29,11 @@ If you wish to contribute to this template, the following information may be hel
 
 1. Clone this project
 
-2. Populate ```SyncApp/fhconfig.plist``` with your values as explained [here](http://docs.feedhenry.com/v3/dev_tools/sdks/ios.html#ios-configure).
+2. Populate ```sync-ios-app/fhconfig.plist``` with your values as explained [on section 2.1.4. Setup](https://access.redhat.com/documentation/en/red-hat-mobile-application-platform-hosted/3/paged/client-sdk/chapter-2-native-ios-objective-c).
 
 3. Run ```pod install``` 
 
-4. Open SyncApp.xcworkspace
+4. Open sync-ios-app.xcworkspace
 
 5. Run the project
  
@@ -41,7 +41,7 @@ If you wish to contribute to this template, the following information may be hel
 
 ### Start synchronization
 
-In ```SyncApp/DataManager.m``` the synchronization loop is started.
+In ```sync-ios-app/DataManager.m``` the synchronization loop is started.
 ```
     FHSyncConfig* conf = [[FHSyncConfig alloc] init];
     conf.syncFrequency = 30;
@@ -60,7 +60,7 @@ In ```SyncApp/DataManager.m``` the synchronization loop is started.
 [3] Initialize a sync client for a given dataset.
 
 ### Listening to sync notification to hook in 
-In ```SyncApp/DataManager.m``` the method ```onSyncMessage``` is your callback method on sync events.
+In ```sync-ios-app/DataManager.m``` the method ```onSyncMessage``` is your callback method on sync events.
 
 ```
 - (void) onSyncMessage:(NSNotification*) note
