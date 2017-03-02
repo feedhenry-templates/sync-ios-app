@@ -15,9 +15,9 @@
 		48287EF01C24751E005D5E52 /* RootViewCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 48287EE71C24751E005D5E52 /* RootViewCotroller.m */; };
 		48287EF11C24751E005D5E52 /* ShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 48287EE91C24751E005D5E52 /* ShoppingItem.m */; };
 		48287EF21C24751E005D5E52 /* ShoppingItem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48287EEA1C24751E005D5E52 /* ShoppingItem.xcdatamodeld */; };
-		48287EF31C24751E005D5E52 /* SyncApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48287EEC1C24751E005D5E52 /* SyncApp-Info.plist */; };
 		48287EF61C247535005D5E52 /* fhconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48287EF51C247535005D5E52 /* fhconfig.plist */; };
 		48287EFB1C247698005D5E52 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48287EF91C247698005D5E52 /* MainStoryboard.storyboard */; };
+		8818ACF71E64520C0016B0DD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8818ACF61E64520C0016B0DD /* Launch Screen.storyboard */; };
 		EE06A9A7FF8F1C2475CBC202 /* libPods-sync-ios-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4824AD89A58F06C6B475843 /* libPods-sync-ios-app.a */; };
 /* End PBXBuildFile section */
 
@@ -37,11 +37,11 @@
 		48287EE81C24751E005D5E52 /* ShoppingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingItem.h; sourceTree = "<group>"; };
 		48287EE91C24751E005D5E52 /* ShoppingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingItem.m; sourceTree = "<group>"; };
 		48287EEB1C24751E005D5E52 /* ShoppingItem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingItem.xcdatamodel; sourceTree = "<group>"; };
-		48287EEC1C24751E005D5E52 /* SyncApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SyncApp-Info.plist"; sourceTree = "<group>"; };
 		48287EED1C24751E005D5E52 /* SyncApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SyncApp-Prefix.pch"; sourceTree = "<group>"; };
 		48287EF51C247535005D5E52 /* fhconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fhconfig.plist; sourceTree = "<group>"; };
 		48287EFA1C247698005D5E52 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		712B6EE36E2728B1D951023C /* Pods-sync-ios-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sync-ios-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sync-ios-app/Pods-sync-ios-app.debug.xcconfig"; sourceTree = "<group>"; };
+		8818ACF61E64520C0016B0DD /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E4824AD89A58F06C6B475843 /* libPods-sync-ios-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sync-ios-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC734863384937DCFC7DF93 /* Pods-sync-ios-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sync-ios-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-sync-ios-app/Pods-sync-ios-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,12 +90,12 @@
 				48287EE81C24751E005D5E52 /* ShoppingItem.h */,
 				48287EE91C24751E005D5E52 /* ShoppingItem.m */,
 				48287EEA1C24751E005D5E52 /* ShoppingItem.xcdatamodeld */,
-				48287EEC1C24751E005D5E52 /* SyncApp-Info.plist */,
 				48287EED1C24751E005D5E52 /* SyncApp-Prefix.pch */,
 				48287EF91C247698005D5E52 /* MainStoryboard.storyboard */,
 				48287ED51C247338005D5E52 /* Assets.xcassets */,
 				48287EDA1C247338005D5E52 /* sync-ios-app-Info.plist */,
 				48287EC91C247338005D5E52 /* Supporting Files */,
+				8818ACF61E64520C0016B0DD /* Launch Screen.storyboard */,
 			);
 			path = "sync-ios-app";
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				48287EFB1C247698005D5E52 /* MainStoryboard.storyboard in Resources */,
 				48287EF61C247535005D5E52 /* fhconfig.plist in Resources */,
 				48287ED61C247338005D5E52 /* Assets.xcassets in Resources */,
-				48287EF31C24751E005D5E52 /* SyncApp-Info.plist in Resources */,
+				8818ACF71E64520C0016B0DD /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
