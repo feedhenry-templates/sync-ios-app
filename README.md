@@ -32,7 +32,7 @@ If you wish to contribute to this template, the following information may be hel
 
 1. Clone this project
 
-2. Populate ```sync-ios-app/fhconfig.plist``` with your values as explained [on section 2.1.4. Setup](https://access.redhat.com/documentation/en-us/red_hat_mobile_application_platform/4.3/html/client_sdk/native-ios-objective-c#native-ios-objective-c-setup).
+2. Populate ```sync-ios-app/fhconfig.plist``` with your values as explained [here](https://access.redhat.com/documentation/en-us/red_hat_mobile_application_platform/4.3/html/client_sdk/native-ios-objective-c#native-ios-objective-c-setup).
 
 3. Run ```pod install``` 
 
