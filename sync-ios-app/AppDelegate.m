@@ -64,6 +64,22 @@
         [self startSyncClient];
     } AndFailure:^(FHResponse* res){
         NSLog(@"Init Failed. Error: %@", res.error);
+        NSString * message = @"Please fill in fhconfig.plist file.";
+        if (res.parsedResponse) {
+            message = [res.parsedResponse objectForKey:@"msg"];
+        }
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"Init failure"
+                                     message:message
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okAction = [UIAlertAction
+                                   actionWithTitle:@"Ok"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:okAction];
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
         [self startSyncClient];
     }];
     
