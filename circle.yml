@@ -1,11 +1,11 @@
 machine:
   xcode:
-    version: 9.0
+    version: 8.1
   environment:
     XCODE_WORKSPACE: "sync-ios-app.xcworkspace"
     XCODE_SCHEME: "sync-ios-app"
-    SIMULATOR: "iPhone 7"
-    OS: "11.0"
+    SIMULATOR: "iPhone 6"
+    OS: "10.1"
 
 general:
   branches:
