@@ -84,9 +84,9 @@
 {
     NSString* name = self.nameField.text;
     if (nil == name || [name isEqualToString:@""]) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Name can not be empty" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-        [alert dismissWithClickedButtonIndex:0 animated:NO];
-        [alert show];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Name can not be empty" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
         return;
     } else {
         _item.name = name;
