@@ -1,17 +1,17 @@
 # sync-ios-app
-[![Build Status](https://travis-ci.org/feedhenry-templates/sync-ios-app.png)](https://travis-ci.org/feedhenry-templates/sync-ios-app)
+[![circle-ci](https://img.shields.io/circleci/project/github/feedhenry-templates/sync-ios-app/master.svg)](https://circleci.com/gh/feedhenry-templates/sync-ios-app)
 
 > Swift version is available [here](https://github.com/feedhenry-templates/sync-ios-swift).
 
-Author: Corinne Krych   
+Author: Corinne Krych  
 Level: Intermediate  
-Technologies: Objective-C, iOS, RHMAP, CocoaPods.
-Summary: A demonstration of how to synchronize a single collection with RHMAP. 
-Community Project : [Feed Henry](http://feedhenry.org)
+Technologies: Objective-C, iOS, RHMAP, CocoaPods.  
+Summary: A demonstration of how to synchronize a single collection with RHMAP.  
+Community Project : [Feed Henry](http://feedhenry.org)  
 Target Product: RHMAP  
-Product Versions: RHMAP 3.7.0+   
+Product Versions: RHMAP 3.7.0+  
 Source: https://github.com/feedhenry-templates/sync-ios-app  
-Prerequisites: fh-ios-sdk: 4.+, Xcode: 9+, iOS SDK: iOS 9+, CocoaPods: 1.3.0+
+Prerequisites: fh-ios-sdk: 5.+, Xcode: 9+, iOS SDK: iOS 9+, CocoaPods: 1.3.0+
 
 ## What is it?
 
@@ -32,19 +32,19 @@ If you wish to contribute to this template, the following information may be hel
 
 1. Clone this project
 
-2. Populate ```sync-ios-app/fhconfig.plist``` with your values as explained [here](https://access.redhat.com/documentation/en-us/red_hat_mobile_application_platform/4.3/html/client_sdk/native-ios-objective-c#native-ios-objective-c-setup).
+2. Populate `sync-ios-app/fhconfig.plist` with your values as explained [here](https://access.redhat.com/documentation/en-us/red_hat_mobile_application_platform/4.3/html/client_sdk/native-ios-objective-c#native-ios-objective-c-setup).
 
-3. Run ```pod install``` 
+3. Run `pod install`
 
-4. Open sync-ios-app.xcworkspace
+4. Open `sync-ios-app.xcworkspace`
 
 5. Run the project
- 
+
 ## How does it work?
 
 ### Start synchronization
 
-In ```sync-ios-app/DataManager.m``` the synchronization loop is started.
+In `sync-ios-app/DataManager.m` the synchronization loop is started.
 ```
     FHSyncConfig* conf = [[FHSyncConfig alloc] init];
     conf.syncFrequency = 30;
@@ -58,12 +58,12 @@ In ```sync-ios-app/DataManager.m``` the synchronization loop is started.
 ```
 [1] Initialize with sync configuration.
 
-[2] Register to listen to ```kFHSyncStateChangedNotification``` event. Trigger ```onSyncMessage:``` as a callback.
+[2] Register to listen to `kFHSyncStateChangedNotification` event. Trigger `onSyncMessage:` as a callback.
 
 [3] Initialize a sync client for a given dataset.
 
-### Listening to sync notification to hook in 
-In ```sync-ios-app/DataManager.m``` the method ```onSyncMessage``` is your callback method on sync events.
+### Listening to sync notification to hook in
+In `sync-ios-app/DataManager.m` the method `onSyncMessage` is your callback method on sync events.
 
 ```
 - (void) onSyncMessage:(NSNotification*) note
@@ -73,7 +73,7 @@ In ```sync-ios-app/DataManager.m``` the method ```onSyncMessage``` is your callb
     if([msg.code isEqualToString:REMOTE_UPDATE_APPLIED_MESSAGE]) {
         // Add UI / business code
     }
-    
+
     [[NSNotificationCenter defaultCenter] postNotificationName:kAppDataUpdatedNotification object:nil];
 }
 ```
